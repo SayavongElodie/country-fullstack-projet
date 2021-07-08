@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const countriesData = require('./countriesData.json');
-const port = 4000;
+const port = 3000;
 const app = express ();
 
 app.use(cors());
@@ -22,6 +22,18 @@ app.get('/:countryName', (req, res) => {
     res.json({
         status: "ok",
         data: countryData,
+    })
+})
+
+app.get('/:capitalName', (req, res) => {
+    const capitalName = req.params.capitalName
+    const capitalData = countriesData.filter(
+        (capital) => capital.capital === capitalName
+    )
+
+    res.json({
+        status:"ok",
+        data: capitalData,
     })
 })
 
