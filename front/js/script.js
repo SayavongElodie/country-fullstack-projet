@@ -3,6 +3,8 @@ const api = 'http://localhost:3000/';
 $(() => {
     getAllCountries();
     $("#btnShowData").click(clickButton);
+    $('#capital').click(capitalName);
+    $('#country-name').click(countryName);
 })
 
 function getAllCountries() {
@@ -29,19 +31,15 @@ function updateList(list) {
     )})
 }
 
-// function capitalName() {
-//     $('#capitalName').click(function() {
-//         $('#input-g[placeholder]').placeholder();
-//         $('#input-g').attr("placeholder", "Type a capital")
-//     })
-// }
+function capitalName() {
+    $('#input-g').attr("placeholder", "Type a capital")
+    $('#country-name').prop("checked", false)
+}
 
-// function countryName() {
-//     $('#capitalName').click(function() {
-//         $('#input-g[placeholder]').placeholder();
-//         $('#input-g').attr("placeholder", "Type a capital")
-//     })
-// }
+function countryName() {
+    $('#input-g').attr("placeholder", "Type a country name")
+    $('#capital').prop("checked", false)
+}
 
 function clickButton() {
     const userValue = $('#userValue').val();

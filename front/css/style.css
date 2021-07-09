@@ -17,7 +17,8 @@ html {
 
     height: 25rem;
 
-    background-image: url(/pic/world-picture.jpeg);
+    background-image: url(/front/pic/world-picture.jpeg);
+    background-size: 90rem;
 
     border-bottom: solid 0.2rem white;
 }
