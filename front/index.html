@@ -8,15 +8,25 @@
 
     <title>Countries App</title>
 </head>
+
 <body>
+
     <div class="container-1">
         <h1>COUNTRIES API</h1>
     </div>
     
     <div class="form">
-        <input type="text" id="userValue" placeholder="France">
+        <input id="input-g" type="text" id="userValue" placeholder="Type a country">
         <button id="btnShowData">Show Data</button>
     </div>
+
+    <div class="input-radio">
+        <input class="input-radio-size capitalName color" type="radio" id="country-name" value="country-name">
+        <label for="country-name">Country name</label>
+
+        <input class="input-radio-size" type="radio" id="capital" value="capital">
+        <label for="capital">Capital</label>
+      </div>
 
     <div class="container-2">
         <ul id="list"></ul>

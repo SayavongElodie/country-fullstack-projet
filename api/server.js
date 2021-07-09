@@ -7,17 +7,19 @@ const app = express ();
 app.use(cors());
 
 app.get('/all', (req, res) => {
+
     res.json({
         status: "ok",
         data: countriesData,
     })
 })
 
-app.get('/:countryName', (req, res) => {
-    const countryName = req.params.countryName
+app.get('/country/:name', (req, res) => {
+    const countryName = req.params.name
     const countryData = countriesData.filter(
-        (country) => country.name === countryName
-    )
+        country => {
+            return country.name.toLowerCase() === countryName.toLowerCase();
+        })
 
     res.json({
         status: "ok",
@@ -25,11 +27,12 @@ app.get('/:countryName', (req, res) => {
     })
 })
 
-app.get('/:capitalName', (req, res) => {
-    const capitalName = req.params.capitalName
+app.get('/capital/:name', (req, res) => {
+    const capitalName = req.params.name
     const capitalData = countriesData.filter(
-        (capital) => capital.capital === capitalName
-    )
+        capital => {
+            return capital.capital.toLowerCase() === capitalName.toLowerCase();
+        })
 
     res.json({
         status:"ok",

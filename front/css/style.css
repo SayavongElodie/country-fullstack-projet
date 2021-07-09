@@ -1,7 +1,11 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 html {
-    padding: 0;
-    margin: 0;
-    background-color: rgb(72, 116, 128);
+    background-color: #264A70;
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
@@ -9,33 +13,39 @@ html {
 .container-1 {
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    height: 25rem;
+
+    background-image: url(/pic/world-picture.jpeg);
+
+    border-bottom: solid 0.2rem white;
 }
 
 .form {
     display: flex;
     justify-content: center;
+
+    padding-top: 4rem;
 }
 
 .list {
     list-style: none;
     text-align: center;
 
-    margin-top: 2rem;
+    margin-top: 1rem;
     width: 35rem;
+    height: 4rem;
 
     background-color: white;
     color:grey;
 
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #list {
-    padding-top: 2rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,4 +57,18 @@ input {
 
     margin-right: 1rem;
     margin-left: 2rem;;
+}
+
+.input-radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 6rem;
+    padding-top: 1rem;
+}
+
+.input-radio-size {
+    width: 1rem;
+    height: 1rem;
 }
